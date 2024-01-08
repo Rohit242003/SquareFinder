@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Square Finder about page </title>
+
+		<link rel="stylesheet" href="c1.css"/>
+		
+	</head>
+	<body>
+        <center>
+			<h1> Result page</h1>
+			<br><br>
+			<h2 id="msg"/>
+		<script> 
+			let msg=document.getElementById("msg");
+			let r = localStorage.getItem("res");
+			if (r== null)
+			{
+				msg.innerHTML = "Result Not Found";
+			}
+			else
+			{
+				msg.innerHTML = r;
+			}
+		</script>
+		<br><br>
+		<a href="index.html" > Home</a>		
+		
+	</center>
+	</body>
+</html>

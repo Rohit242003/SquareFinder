@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Square Finder </title>
+
+		<link rel="stylesheet" href="c1.css"/>
+		<script>
+			function square()
+			{
+				event.preventDefault();
+				let num = document.getElementById("num");
+				if(num=="")
+				{
+					alert("you did not enter any Number");
+					num.focus();
+					return;
+				}
+				let n = parseFloat(num.value);
+				let r = n*n;
+				localStorage.setItem("res",r);
+				window.location.href="result.html";
+				
+						
+			}
+		</script>
+	</head>
+	<body>
+        <center>
+		<script> localStorage.removeItem("res");</script>
+		<h1> Square Finder App</h1>
+		<form onsubmit = "square()">
+			<input type="number" id="num" placeholder="Enter the Number" step="any"/>
+			<br><br>
+			<input type="submit" value="submit"/>
+		</form>
+		
+		
+	</center>
+	</body>
+</html>
